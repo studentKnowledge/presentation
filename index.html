@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💻 Práctica 2 Demo</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        user-select: none;
+      }
+
+      body {
+        height: 100vh;
+        background-color: rgb(48, 48, 48);
+        overflow: hidden;
+      }
+
+      nav {
+        width: 100%;
+        background-color: rgb(20, 20, 20);
+        color: white;
+        padding: 1.5em;
+        font-size: larger;
+        text-align: center;
+        border-bottom: solid 5px rgb(77, 77, 77);
+      }
+
+      #wrap-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(20, 20, 20);
+        border-radius: 14px;
+        padding: 2.5em;
+        gap: 15px;
+        border: solid 5px rgb(77, 77, 77);
+        margin: 0 auto;
+      }
+
+      #container button {
+        padding: 1.5em;
+        max-width: 100%;
+        width: 400px;
+        background-color: rgb(87, 87, 87);
+        border: none;
+        border-radius: 8px;
+        transition: 200ms all ease-in-out;
+      }
+
+      #container button:hover {
+        filter: opacity(0.8);
+        transform: scale(1.05);
+      }
+
+      #container button a {
+        color: white;
+        text-decoration: none;
+        font-size: x-large;
+      }
+
+      .placa {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.45);
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 300ms ease-in-out;
+      }
+
+      .placa img {
+        width: 70%;
+        height: 90%;
+        margin: 0 auto;
+        border-radius: 15px;
+        border: solid 5px rgb(68, 68, 68);
+      }
+
+      .placa a {
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-size: x-large;
+      }
+
+      #placa-1:target {
+        top: 0;
+      }
+
+      #placa-2:target {
+        top: 0;
+      }
+
+      #placa-3:target {
+        top: 0;
+      }
+
+      #placa-4:target {
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>Práctica 2 Demo</h1>
+    </nav>
+
+    <div id="placa-1" class="placa">
+      <img src="./Images/placa_1.png" alt="placa_1" />
+      <a href="#">CLOSE</a>
+    </div>
+
+    <div id="placa-2" class="placa">
+      <img src="./Images/placa_2.png" alt="placa_2" />
+      <a href="#">CLOSE</a>
+    </div>
+
+    <div id="placa-3" class="placa">
+      <img src="./Images/placa_3.png" alt="placa_3" />
+      <a href="#">CLOSE</a>
+    </div>
+
+    <div id="placa-4" class="placa">
+      <img src="./Images/placa_4.png" alt="placa_4" />
+      <a href="#">CLOSE</a>
+    </div>
+
+    <main id="wrap-container">
+      <div id="container">
+        <button>
+          <a href="#placa-1">🖥️ Placa 1</a>
+        </button>
+
+        <button>
+          <a href="#placa-2">🖥️ Placa 2</a>
+        </button>
+
+        <button>
+          <a href="#placa-3">🖥️ Placa 3</a>
+        </button>
+
+        <button>
+          <a href="#placa-4">🖥️ Placa 4</a>
+        </button>
+
+        <button>
+          <a href="./document.html" target="_blank">📃 PDF tarea</a>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
